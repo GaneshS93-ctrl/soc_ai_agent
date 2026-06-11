@@ -1,5 +1,4 @@
 from langchain_core.tools import tool
-from streamlit import user
 
 @tool
 def isolate_host(user: str) -> dict:
