@@ -57,51 +57,51 @@
 
 soc_ai  
 │    .env   
-│    graph.py   
-│    llm.py 
-│    main.py 
-│    schemas.py 
-│    state.py 
-│    run.txt 
+│    graph.py     
+│    llm.py   
+│    main.py   
+│    schemas.py   
+│    state.py   
+│    run.txt   
 │    
-├───agents 
-│    │   action_agent.py 
-│    │   attack_chain_agent.py 
-│    │   log_agent.py 
-│    │   malware_agent.py 
-│    │   report_agent.py 
-│    │   response_agent.py 
-│    │   retrieval_agent.py 
-│    │   supervisor.py 
-│    │   threat_agent.py 
+├───agents   
+│    │   action_agent.py   
+│    │   attack_chain_agent.py   
+│    │   log_agent.py   
+│    │   malware_agent.py   
+│    │   report_agent.py   
+│    │   response_agent.py   
+│    │   retrieval_agent.py   
+│    │   supervisor.py   
+│    │   threat_agent.py   
 │
-├───chroma_db
-│    │    chroma.sqlite3
-│    │
-│    └───d1dbc61d-8876-478b-a102-0fba1d7e697f
-│           data_level0.bin
-│           header.bin
-│           length.bin
-│           link_lists.bin
-│    
-├───doc 
-│       doc.md 
-│
-├───knowledge_base 
-│       log_analyser_guide.md 
-│       Malware_analyser_guide.md 
-│ 
-├───rag 
-│   │    chunker.py 
-│   │    embeddings.py 
-│   │    ingest.py 
-│   │    loader.py 
-│   │    retriever.py 
-│   │    vectordb.py 
-│ 
-├───tools 
-    │    logparser.py 
-    │    tools.py 
+├───chroma_db  
+│    │    chroma.sqlite3  
+│    │  
+│    └───d1dbc61d-8876-478b-a102-0fba1d7e697f  
+│           data_level0.bin  
+│           header.bin  
+│           length.bin  
+│           link_lists.bin  
+│      
+├───doc   
+│       doc.md   
+│  
+├───knowledge_base   
+│       log_analyser_guide.md   
+│       Malware_analyser_guide.md   
+│   
+├───rag   
+│   │    chunker.py   
+│   │    embeddings.py   
+│   │    ingest.py   
+│   │    loader.py   
+│   │    retriever.py   
+│   │    vectordb.py   
+│   
+├───tools   
+    │    logparser.py   
+    │    tools.py   
 
 # Agent 1: Log Analysis Agent
   
