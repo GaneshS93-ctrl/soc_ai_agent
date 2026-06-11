@@ -55,7 +55,7 @@
 
 ## 📁 Project Structure
 
-soc_ai  
+soc_ai_agent  
 │    .env   
 │    graph.py     
 │    llm.py   
@@ -74,7 +74,7 @@ soc_ai
 │    │   retrieval_agent.py   
 │    │   supervisor.py   
 │    │   threat_agent.py   
-│
+│    
 ├───chroma_db  
 │    │    chroma.sqlite3  
 │    │  
@@ -83,7 +83,7 @@ soc_ai
 │           header.bin  
 │           length.bin  
 │           link_lists.bin  
-│      
+│    
 ├───doc   
 │       doc.md   
 │  
