@@ -1,0 +1,19 @@
+Step 1: Create Virtual Environment
+python -m venv venv
+
+
+Step 2: Activate It
+venv\Scripts\activate
+
+
+Step 3: Install Dependencies
+pip install -r requirements.txt
+
+Step 4: Add OpenAI key in .env
+OPENAI_API_KEY=<API key>
+
+Step 5: Ingest Knowledge Base into ChromaDB
+python -m rag.ingest
+
+Step 6: Run
+CLI: python main.py
