@@ -14,6 +14,7 @@
 * Incident Response Agent
 * Action Agent
 * Report Generation Agent
+* monitoring Agent
 
 # Workflow:
 
@@ -49,6 +50,9 @@
                         ¦
                         v
                     Report Agent
+                        ¦
+                        v
+                    monitoring Agent                    
 
 ## A human SOC team may need hours to investigate.
 ## A multi-agent SOC can investigate automatically.
