@@ -1,3 +1,5 @@
+import time
+
 from langchain.agents import create_agent
 
 from llm import llm
@@ -30,6 +32,7 @@ action_llm = create_agent(
 def action_agent(state):
 
     state["execution_path"].append("action_agent")
+    start_time = time.time()
     
     actions = state["response_actions"]
     
@@ -58,8 +61,10 @@ def action_agent(state):
         #print(f"Action Tool: {result}")
     
     state["action_status"] = "done"
+    state["action_agent_latency"] = round(time.time() - start_time, 2)
         
     return {
+        **state,
         "action_status":
         "done"
     }

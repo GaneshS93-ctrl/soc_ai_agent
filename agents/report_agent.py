@@ -1,3 +1,5 @@
+import time
+
 from langchain_core.prompts import ChatPromptTemplate
 
 from llm import llm
@@ -46,6 +48,7 @@ structured_llm = llm.with_structured_output(
 def report_agent(state):
 
     state["execution_path"].append("report_agent")
+    start_time = time.time()
     
     chain = prompt | structured_llm
 
@@ -59,7 +62,10 @@ def report_agent(state):
     
     #print("report_agent Result:", result.report)
 
+    state["report_agent_latency"] = round(time.time() - start_time, 2)
+
     return {
+        **state,
         "report":
         result.report
     }

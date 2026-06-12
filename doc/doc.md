@@ -74,6 +74,7 @@ soc_ai_agent
 │    │   retrieval_agent.py   
 │    │   supervisor.py   
 │    │   threat_agent.py   
+│    │   monitoring_agent.py   
 │    
 ├───chroma_db  
 │    │    chroma.sqlite3  
@@ -86,6 +87,9 @@ soc_ai_agent
 │    
 ├───doc   
 │       doc.md   
+│  
+├───monitoring   
+│       logger.py   
 │  
 ├───knowledge_base   
 │       log_analyser_guide.md   

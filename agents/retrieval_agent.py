@@ -1,9 +1,12 @@
 import os
+import time
 from rag.retriever import get_retriever
 
 def retrieval_agent(state):
 
-    state["execution_path"].append("retrieval")
+    state["execution_path"].append("retrieval_agent")
+    start_time = time.time()
+    state["start_time"] = start_time  # Store start time for latency calculation in monitoring_agent
 
     retriever = get_retriever()
 
@@ -32,5 +35,6 @@ def retrieval_agent(state):
 
     state["retrieved_docs"] = clean_docs      # list of plain strings
     state["sources"] = unique_sources         # deduplicated source filenames
+    state["retrieval_agent_latency"] = round(time.time() - start_time, 2)
 
     return state

@@ -25,5 +25,19 @@ class SOCState(TypedDict):
     action_status: str
 
     report: str
+    
+    monitoring: Dict[str, Any]
 
     next_agent: str
+    
+    action_agent_latency: float
+    threat_agent_latency: float
+    retrieval_agent_latency: float
+    log_agent_latency: float
+    malware_agent_latency: float
+    attack_chain_agent_latency: float
+    response_agent_latency: float
+    report_agent_latency: float
+    Total_latency: float
+    start_time: float
+    

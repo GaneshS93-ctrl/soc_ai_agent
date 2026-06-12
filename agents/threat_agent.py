@@ -1,3 +1,4 @@
+import time
 from langchain_core.prompts import ChatPromptTemplate
 
 from llm import llm
@@ -32,6 +33,7 @@ structured_llm = llm.with_structured_output(
 def threat_agent(state):
     
     state["execution_path"].append("threat_agent")
+    start_time = time.time()
 
     chain = prompt | structured_llm
 
@@ -42,8 +44,10 @@ def threat_agent(state):
     })
 
     print("threat_agent Result:", result.model_dump(),"\n")
+    state["threat_agent_latency"] = round(time.time() - start_time, 2)
 
     return {
+        **state,
         "threat_context":
         result.model_dump()
     }

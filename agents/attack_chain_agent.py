@@ -1,5 +1,5 @@
+import time
 from langchain_core.prompts import ChatPromptTemplate
-
 from llm import llm
 from schemas import AttackChainOutput
 
@@ -47,6 +47,7 @@ structured_llm = llm.with_structured_output(
 def attack_chain_agent(state):
 
     state["execution_path"].append("attack_chain_agent")
+    start_time = time.time()
     
     chain = prompt | structured_llm
 
@@ -56,7 +57,10 @@ def attack_chain_agent(state):
         "malware": state["malware_analysis"]
     })
     print("Attack Chain Result:", result.stages)
+    state["attack_chain_agent_latency"] = round(time.time() - start_time, 2)
+        
     return {
+        **state,
         "attack_chain":
         result.stages
     }

@@ -17,7 +17,19 @@ state = {
     "response_actions": [],
     "actions": [],
     "action_status": "",
-    "report": ""
+    "report": "",
+    "monitoring": {},
+    "action_agent_latency": 0.0,
+    "threat_agent_latency": 0.0,
+    "retrieval_agent_latency": 0.0,
+    "log_agent_latency": 0.0,
+    "malware_agent_latency": 0.0,
+    "attack_chain_agent_latency": 0.0,
+    "response_agent_latency": 0.0,
+    "report_agent_latency": 0.0,
+    "monitoring_agent_latency": 0.0,
+    "Total_latency": 0.0,
+    "start_time": 0.0    
 }
 
 result = graph.invoke(state)

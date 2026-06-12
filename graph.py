@@ -11,6 +11,7 @@ from agents.response_agent import response_agent
 from agents.report_agent import report_agent
 from agents.action_agent import action_agent
 from agents.retrieval_agent import retrieval_agent
+from agents.monitoring_agent import monitoring_agent    
 
 def router(state):
     
@@ -50,6 +51,7 @@ builder.add_node("attack_chain_agent", attack_chain_agent)
 builder.add_node("response_agent", response_agent)
 builder.add_node("action_agent", action_agent)
 builder.add_node("report_agent", report_agent)
+builder.add_node("monitoring_agent", monitoring_agent)
 
 builder.set_entry_point("supervisor")
 
@@ -72,6 +74,8 @@ builder.add_edge("response_agent","supervisor")
 
 builder.add_edge("action_agent","supervisor")
 
-builder.add_edge("report_agent", END)
+builder.add_edge("report_agent","monitoring_agent")
+
+builder.add_edge("monitoring_agent",  END)
 
 graph = builder.compile()
